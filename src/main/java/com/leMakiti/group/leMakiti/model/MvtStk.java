@@ -8,7 +8,6 @@ import java.time.Instant;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -27,4 +26,7 @@ public class MvtStk extends AbstractEntity{
 
     @Column(name = "typemvt")
     private TypeMvtStk typeMvt;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 }

@@ -6,7 +6,6 @@ import javax.persistence.*;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -15,6 +14,9 @@ public class Roles extends AbstractEntity{
 
     @Column(name = "rolename")
     private String roleName;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
     @ManyToOne
     @JoinColumn(name = "idutilisateur")
     private Utilisateur utilisateur;

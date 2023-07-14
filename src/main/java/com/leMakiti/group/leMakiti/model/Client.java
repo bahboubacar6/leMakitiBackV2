@@ -7,7 +7,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -31,6 +30,9 @@ public class Client extends AbstractEntity{
 
     @Column(name = "numTel")
     private String numTel;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 
     @OneToMany(mappedBy = "client")
     private List<CommandeClient> commandeClients;

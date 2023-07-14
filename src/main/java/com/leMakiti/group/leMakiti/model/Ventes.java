@@ -9,7 +9,6 @@ import java.time.Instant;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -24,4 +23,7 @@ public class Ventes extends AbstractEntity{
 
     @Column(name = "commentaire")
     private String commentaire;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 }

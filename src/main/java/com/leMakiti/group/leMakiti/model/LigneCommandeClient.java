@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -26,4 +25,7 @@ public class LigneCommandeClient extends AbstractEntity{
 
     @Column(name = "prixunitaire")
     private BigDecimal prixUnitaire;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 }

@@ -7,7 +7,6 @@ import java.math.BigDecimal;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -23,4 +22,11 @@ public class LigneVente extends AbstractEntity{
 
     @Column(name = "prixunitaire")
     private BigDecimal prixUnitaire;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
+
+    @ManyToOne
+    @JoinColumn(name = "idarticle")
+    private Article article;
 }

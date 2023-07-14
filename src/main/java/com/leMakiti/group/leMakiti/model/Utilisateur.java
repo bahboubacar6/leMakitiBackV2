@@ -8,7 +8,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -35,6 +34,7 @@ public class Utilisateur extends AbstractEntity{
 
     @Column(name = "photo")
     private String photo;
+
     @ManyToOne
     @JoinColumn(name = "identreprise")
     private Entreprise entreprise;

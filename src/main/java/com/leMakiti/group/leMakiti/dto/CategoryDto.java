@@ -1,5 +1,7 @@
 package com.leMakiti.group.leMakiti.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.leMakiti.group.leMakiti.model.Category;
 import lombok.Builder;
 import lombok.Data;
 
@@ -15,5 +17,30 @@ public class CategoryDto {
 
     private String designation;
 
-    private List<ArticleDto> articleDtos;
+    @JsonIgnore
+    private List<ArticleDto> article;
+
+    public static CategoryDto fromEntity(Category category){
+        if (category == null){
+            return null;
+        }
+        return CategoryDto.builder()
+                .id(category.getId())
+                .code(category.getCode())
+                .designation(category.getDesignation())
+                .build();
+    }
+
+    public static Category toEntity(CategoryDto categoryDto){
+        if (categoryDto == null){
+            return null;
+        }
+
+        Category category = new Category();
+        category.setId(categoryDto.getId());
+        category.setCode(categoryDto.getCode());
+        category.setDesignation(categoryDto.getDesignation());
+
+        return category;
+    }
 }

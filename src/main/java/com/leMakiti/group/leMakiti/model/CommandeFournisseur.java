@@ -8,7 +8,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -20,6 +19,9 @@ public class CommandeFournisseur extends AbstractEntity {
 
     @Column(name = "datecommande")
     private Instant dateCommande;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 
     @ManyToOne
     @JoinColumn(name = "idfournisseur")

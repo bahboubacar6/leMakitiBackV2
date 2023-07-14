@@ -10,7 +10,6 @@ import java.util.List;
 
 @Entity
 @Data
-@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -22,6 +21,9 @@ public class Category extends AbstractEntity{
 
     @Column(name = "designation")
     private String designation;
+
+    @Column(name = "identreprise")
+    private Integer idEntreprise;
 
     @OneToMany(mappedBy = "category")
     private List<Article> articles;
