@@ -1,7 +1,5 @@
 package com.leMakiti.group.leMakiti.services.impl;
 
-import com.leMakiti.group.leMakiti.dto.CommandeClientDto;
-import com.leMakiti.group.leMakiti.dto.LigneCommandeClientDto;
 import com.leMakiti.group.leMakiti.dto.LigneVenteDto;
 import com.leMakiti.group.leMakiti.dto.VentesDto;
 import com.leMakiti.group.leMakiti.exception.EntityNotFoundException;
@@ -9,9 +7,7 @@ import com.leMakiti.group.leMakiti.exception.ErrorCodes;
 import com.leMakiti.group.leMakiti.exception.InvalidEntityException;
 import com.leMakiti.group.leMakiti.model.*;
 import com.leMakiti.group.leMakiti.repository.*;
-import com.leMakiti.group.leMakiti.services.CommandeClientService;
 import com.leMakiti.group.leMakiti.services.VentesService;
-import com.leMakiti.group.leMakiti.validator.CommandeClientValidator;
 import com.leMakiti.group.leMakiti.validator.VentesValidator;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

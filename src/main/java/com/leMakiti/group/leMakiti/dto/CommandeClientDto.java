@@ -1,6 +1,5 @@
 package com.leMakiti.group.leMakiti.dto;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.leMakiti.group.leMakiti.model.CommandeClient;
 import lombok.Builder;
 import lombok.Data;
