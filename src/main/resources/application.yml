@@ -16,3 +16,9 @@ spring:
         dialect: org.hibernate.dialect.MySQL5InnoDBDialect
 server:
   port: 8081
+
+flickr:
+  apiKey: 5c8f8d356f51c43cd4737ec132c86263
+  apiSecret: 057525485ae941d2
+  appKey: 72157720888275469-f6203c7d8159acdb
+  appSecret: 20ad9d25f683adb8
