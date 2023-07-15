@@ -1,6 +1,5 @@
 package com.leMakiti.group.leMakiti.validator;
 
-import com.leMakiti.group.leMakiti.dto.ClientDto;
 import com.leMakiti.group.leMakiti.dto.FournisseurDto;
 import org.springframework.util.StringUtils;
 

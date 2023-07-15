@@ -30,6 +30,8 @@ public class EntrepriseDto {
 
     private String siteWeb;
 
+    private Integer idEntreprise;
+
     @JsonIgnore
     private List<UtilisateurDto> utilisateurDtos;
 
@@ -48,6 +50,7 @@ public class EntrepriseDto {
                 .email(entreprise.getEmail())
                 .numTel(entreprise.getNumTel())
                 .siteWeb(entreprise.getSiteWeb())
+                .idEntreprise(entreprise.getIdEntreprise())
                 .build();
     }
 
@@ -67,6 +70,7 @@ public class EntrepriseDto {
         entreprise.setEmail(entrepriseDto.getEmail());
         entreprise.setNumTel(entrepriseDto.getNumTel());
         entreprise.setSiteWeb(entrepriseDto.getSiteWeb());
+        entreprise.setIdEntreprise(entrepriseDto.getIdEntreprise());
 
         return entreprise;
     }

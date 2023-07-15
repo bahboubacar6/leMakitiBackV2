@@ -28,6 +28,8 @@ public class UtilisateurDto {
 
     private String photo;
 
+    private Integer idEntreprise;
+
     private EntrepriseDto entreprise;
 
     private List<RolesDto> roles;
@@ -47,6 +49,7 @@ public class UtilisateurDto {
                 .adresse(AdresseDto.fromEntity(utilisateur.getAdresse()))
                 .photo(utilisateur.getPhoto())
                 .entreprise(EntrepriseDto.fromEntity(utilisateur.getEntreprise()))
+                .idEntreprise(utilisateur.getIdEntreprise())
                 .roles(
                         utilisateur.getRoles() != null?
                                 utilisateur.getRoles().stream()
@@ -71,6 +74,7 @@ public class UtilisateurDto {
         utilisateur.setAdresse(AdresseDto.toEntity(utilisateurDto.getAdresse()));
         utilisateur.setPhoto(utilisateurDto.getPhoto());
         utilisateur.setEntreprise(EntrepriseDto.toEntity(utilisateurDto.getEntreprise()));
+        utilisateur.setIdEntreprise(utilisateurDto.getIdEntreprise());
 
         return utilisateur;
     }

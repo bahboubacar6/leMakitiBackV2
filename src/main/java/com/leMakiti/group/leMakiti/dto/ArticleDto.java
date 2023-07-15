@@ -26,6 +26,8 @@ public class ArticleDto {
 
     private CategoryDto category;
 
+    private Integer idEntreprise;
+
     public static ArticleDto fromEntity(Article article){
         if (article == null){
             return null;
@@ -39,6 +41,7 @@ public class ArticleDto {
                 .tauxTva(article.getTauxTva())
                 .prixUnitaireTtc(article.getPrixUnitaireTtc())
                 .photo(article.getPhoto())
+                .idEntreprise(article.getIdEntreprise())
                 .build();
     }
 
@@ -55,6 +58,7 @@ public class ArticleDto {
         article.setTauxTva(articleDto.getTauxTva());
         article.setPrixUnitaireTtc(articleDto.getPrixUnitaireTtc());
         article.setPhoto(articleDto.getPhoto());
+        article.setIdEntreprise(articleDto.getIdEntreprise());
 
         return article;
     }
