@@ -1,6 +1,5 @@
 package com.leMakiti.group.leMakiti.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
@@ -20,12 +19,10 @@ public class AbstractEntity implements Serializable {
     private Integer id;
 
     @CreatedDate
-    @Column(name = "creationDate", nullable = false)
-    @JsonIgnore
+    @Column(name = "creationDate")
     private Instant creationDate;
 
     @LastModifiedDate
-    @Column(name = "lastModifiedDate", nullable = false)
-    @JsonIgnore
+    @Column(name = "lastModifiedDate")
     private Instant lastModifiedDate;
 }
