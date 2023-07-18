@@ -4,6 +4,7 @@ import com.leMakiti.group.leMakiti.controller.api.CommandeClientApi;
 import com.leMakiti.group.leMakiti.dto.CommandeClientDto;
 import com.leMakiti.group.leMakiti.services.CommandeClientService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -21,27 +22,28 @@ public class CommandeClientController implements CommandeClientApi {
     }
 
     @Override
-    public CommandeClientDto save(CommandeClientDto dto) {
-        return commandeClientService.save(dto);
+    public ResponseEntity<CommandeClientDto> save(CommandeClientDto dto) {
+        return ResponseEntity.ok(commandeClientService.save(dto));
     }
 
     @Override
-    public CommandeClientDto findById(Integer id) {
-        return commandeClientService.findById(id);
+    public ResponseEntity<CommandeClientDto> findById(Integer id) {
+        return ResponseEntity.ok(commandeClientService.findById(id));
     }
 
     @Override
-    public CommandeClientDto findByCodeCmdClient(String codeArticle) {
-        return commandeClientService.findByCode(codeArticle);
+    public ResponseEntity<CommandeClientDto> findByCodeCmdClient(String codeArticle) {
+        return ResponseEntity.ok(commandeClientService.findByCode(codeArticle));
     }
 
     @Override
-    public List<CommandeClientDto> findAll() {
-        return commandeClientService.findAll();
+    public ResponseEntity<List<CommandeClientDto>> findAll() {
+        return ResponseEntity.ok(commandeClientService.findAll());
     }
 
     @Override
-    public void delete(Integer id) {
+    public ResponseEntity delete(Integer id) {
         commandeClientService.delete(id);
+        return ResponseEntity.ok().build();
     }
 }

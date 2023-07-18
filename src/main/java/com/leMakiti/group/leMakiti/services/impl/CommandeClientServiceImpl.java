@@ -1,6 +1,5 @@
 package com.leMakiti.group.leMakiti.services.impl;
 
-import com.leMakiti.group.leMakiti.dto.ClientDto;
 import com.leMakiti.group.leMakiti.dto.CommandeClientDto;
 import com.leMakiti.group.leMakiti.dto.LigneCommandeClientDto;
 import com.leMakiti.group.leMakiti.exception.EntityNotFoundException;

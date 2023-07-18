@@ -3,4 +3,11 @@ package com.leMakiti.group.leMakiti.utils;
 public interface Constants {
 
      String APP_ROOT = "gestiondestock/v2";
+
+     String COMMANDE_FOURNISSEUR_ENDPOINT = APP_ROOT + "/cmdFournisseurs";
+     String CREATE_COMMANDE_FOURNISSEUR_ENDPOINT = COMMANDE_FOURNISSEUR_ENDPOINT + "/create";
+     String FIND_COMMANDE_FOURNISSEUR_BY_ID_ENDPOINT = COMMANDE_FOURNISSEUR_ENDPOINT + "/{idCmdFournisseur}";
+     String FIND_COMMANDE_FOURNISSEUR_BY_CODE_ENDPOINT = COMMANDE_FOURNISSEUR_ENDPOINT + "/{codeCmdFournisseur}";
+     String FIND_ALL_COMMANDE_FOURNISSEUR_ENDPOINT = COMMANDE_FOURNISSEUR_ENDPOINT + "/all";
+     String DELETE_COMMANDE_FOURNISSEUR_ENDPOINT = COMMANDE_FOURNISSEUR_ENDPOINT + "/delete/{idCmdFournisseur}";
 }
